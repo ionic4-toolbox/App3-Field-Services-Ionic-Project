@@ -1,0 +1,53 @@
+page-home {
+
+.header{
+    background-color: blueviolet;
+}
+.home{
+    color: white;
+    text-align: center;   
+}
+
+.home h1{
+    font-size: 15px;
+}
+
+.Newincidents{
+   background-color: #f4b642;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+
+}
+.Resolvedincidents{
+   background-color: steelblue;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+
+}
+.workOrder{
+    background-color: #1ebc26;
+    text-align: center;
+    color:white;
+    font-size: 13px;
+}
+
+.manualOverride{
+    background-color: #bc671d;
+    text-align: center;
+    color:white;
+    font-size: 13px;
+}
+.content{
+    margin-top:5%;
+}
+
+.row-margin{
+    margin-bottom:-4%;
+}
+
+::-webkit-scrollbar{
+display:none;
+} 
+}

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>New Incidents</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- shows the loader component -->
+<ion-content padding class="home">
+<div *ngIf="showLoader">
+  <custom-loader></custom-loader>
+</div>
+<!-- renders the incidents or shows no incident or blank(if error) in the page -->
+  <!-- <div *ngIf="incidentExist != null; then dataRendered else noData">
+</div> -->
+<div [ngSwitch]="showView">
+<ng-template [ngSwitchCase]="'Yes'"  #dataRendered>
+    <div class="row  row-styles" *ngFor="let incident of incidents">
+        <div class="col-xs-12 col-md-12 col-sm-12">
+           <single-incident [incidentAttribute]="incident" (onIncidentExpand)="incidentExpand($event)" (onIncidentShrinked)="incidentShrinked($event)"></single-incident>
+        </div>
+  </div>
+</ng-template>
+<ng-template [ngSwitchCase]="'No'" #noData>
+  <div>
+    <img src="../../assets/img/hurrahNoIncidents1.png" alt="No Incidents">
+    <h1>Hurrah!!</h1><h1>No New Incidents..!!</h1>
+  </div>
+</ng-template>
+<ng-template [ngSwitchCase]="'Error'" #noData>
+</ng-template>
+</div>
+</ion-content>
